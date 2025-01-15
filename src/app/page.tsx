@@ -1,7 +1,7 @@
-import About from "@/components/navbar/home/About";
-import Intro from "@/components/navbar/home/Intro";
-import ShopButton from "@/components/navbar/home/ShopButton";
-import Header from "@/components/navbar/home/Header";
+import About from "@/components/home/About";
+import Intro from "@/components/home/Intro";
+import ShopButton from "@/components/home/ShopButton";
+import Header from "@/components/home/Header";
 export default function Home() {
   return (
     <div className="text-white flex flex-col items-center w-screen">
