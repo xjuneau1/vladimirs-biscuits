@@ -9,11 +9,17 @@ interface BackgroundWrapperProps {
   brightness?: number;   // Optional prop for brightness level (default is 100)
 }
 
-const BackgroundWrapper: React.FC<BackgroundWrapperProps> = ({ src, alt, children, tintOpacity = 0.5, brightness = 0.75 }) => {
+const BackgroundWrapper: React.FC<BackgroundWrapperProps> = ({
+  src,
+  alt,
+  children,
+  tintOpacity = 0.5,
+  brightness = 0.75,
+}) => {
   return (
-    <div className="relative w-full min-h-screen">
+    <div className="relative w-full min-h-screen overflow-hidden">
       {/* Background Image with brightness filter */}
-      <div className="absolute top-0 left-0 w-full h-full z-0">
+      <div className="absolute inset-0 w-full h-full z-0">
         <Image
           src={src}
           alt={alt}
@@ -27,7 +33,7 @@ const BackgroundWrapper: React.FC<BackgroundWrapperProps> = ({ src, alt, childre
 
       {/* Overlay with customizable opacity */}
       <div
-        className="absolute top-0 left-0 w-full h-full z-1"
+        className="absolute inset-0 w-full h-full z-1"
         style={{ backgroundColor: 'black', opacity: tintOpacity }}
       ></div>
 

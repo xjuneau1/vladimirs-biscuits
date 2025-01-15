@@ -4,7 +4,7 @@ import ShopButton from "@/components/home/ShopButton";
 import Header from "@/components/home/Header";
 export default function Home() {
   return (
-    <div className="text-white flex flex-col items-center w-screen">
+    <div className="text-white flex flex-col items-center">
       <Header />
       <Intro />
       <ShopButton />
