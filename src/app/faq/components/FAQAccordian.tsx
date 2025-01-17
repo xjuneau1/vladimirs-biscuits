@@ -23,17 +23,17 @@ const FAQAccordian: React.FC<FAQAccordianProps> = ({ faqs }) => {
             onClick={() => handleCardClick(faq.id)}
             className={`flex flex-col min-h-min cursor-pointer transition-all duration-300 ease-in-out text-center bg-white w-full ${
               faq.id === 1 ? "border-t border-b" : "border-b"
-            }`}
+            }${faq.id === 14 ? "border-=none" : ""}`}
           >
             {activeFaqId === faq.id ? (
               <div className="flex flex-col">
-                <h2 className="text-lg font-bold border-b border-black w-full p-2 md:p-4">
+                <h2 className="text-xl font-bold w-full p-4">
                   {faq.question}
                 </h2>
                 <div className="max-h-min p-2  md:p-6">{faq.answer}</div>
               </div>
             ) : (
-              <h2 className={`text-xl p-4 font-bold ${activeFaqId === faq.id ? "": " py-16"}`}>{faq.question}</h2>
+              <h2 className={`text-xl p-4 font-bold ${activeFaqId === faq.id ? "": ""}`}>{faq.question}</h2>
             )}
           </div>
         );
