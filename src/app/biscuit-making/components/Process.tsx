@@ -46,27 +46,27 @@ const process:ProcessStep[] = [
 
 const Process:React.FC =()=> {
   return (
-    <div className="flex flex-col items-center text-white w-full my-8 p-8 md:p-0">
+    <div className="flex flex-col items-center text-[#FDF6E3] w-full my-8 p-8 md:p-0">
       <h1 className="text-4xl md:text-5xl text-center font-bold p-2">
         The Biscuit-Making Process
       </h1>
       <h2 className="text-xl md:text-2xl text-center font-semibold p-2">
         From Scratch to Snack: How Vladimir Does It
       </h2>
-      <ol className="flex flex-col items-center w-full md:w-1/2 list-decimal">
+      <ol className="flex flex-col items-center w-full md:w-1/2">
         {process.map((step, index) => {
           return (
-            <li key={index} className="p-4 font-bold">
-              <h1 className="text-xl md:text-lg font-semibold p-2">
+            <li key={index} className="p-4 my-4 font-bold">
+              <h1 className="text-2xl md:text-xl text-center font-semibold p-2">
                 {step.title}
               </h1>
-              <h2 className="text-sm italic p-2">{step.quote}</h2>
-              <span className="font-normal">{step.info}</span>
+              <h2 className="text-xs md:text-sm text-center italic py-2">{step.quote}</h2>
+              <span className="font-normal p-4">{step.info}</span>
               <div className="my-2">
-                <div className="text-xl md:text-lg font-semibold">
+                <div className="text-xl md:text-lg font-semibold mt-4">
                   {step.subtitle}
                 </div>
-                <div className="text-sm md:text-md font-normal">{step.why}</div>
+                <div className="text-sm md:text-md font-normal pt-2">{step.why}</div>
               </div>
             </li>
           );

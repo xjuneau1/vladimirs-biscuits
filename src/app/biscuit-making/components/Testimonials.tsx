@@ -1,6 +1,6 @@
 export default function Testimonials() {
   return (
-    <div className="flex flex-col items-center text-white my-8">
+    <div className="flex flex-col items-center text-white">
       <h1 className="text-3xl p-2">Testimonials</h1>
       <h2 className="text-xl mt-2">Happy Customers Speak Out</h2>
       <h3 className="text-lg italic mb-2">"The proof is in the purring!"</h3>

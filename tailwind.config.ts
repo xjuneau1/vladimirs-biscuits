@@ -15,6 +15,7 @@ export default {
       animation: {
         flip: 'flip 2s ease-in-out infinite',
         wiggle: 'wiggle 1.5s ease-in-out infinite',
+        'gradient-move': 'gradientMove 6s linear infinite',
       },
       keyframes:{
         flip: {
@@ -25,7 +26,12 @@ export default {
         wiggle: {
           '0%, 100%': { transform: 'rotate(-3deg)' },
           '50%': { transform: 'rotate(3deg)' },
-        }
+        },
+        gradientMove: {
+          '0%': { 'background-position': '0% 50%' },
+          '50%': { 'background-position': '100% 50%' },
+          '100%': { 'background-position': '0% 50%' },
+        },
       }
     },
   },

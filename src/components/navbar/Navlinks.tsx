@@ -16,7 +16,7 @@ const Navlinks: React.FC<NavlinksProps> = ({ links }) => {
     <ul className="flex md:ml-auto">
       {links.map((link, index) => {
         return (
-          <li key={index} className=" mx-2 md:mx-4 border-b border-[#000000]">
+          <li key={index} className="text-[#4B3F37] mx-2 md:mx-4 border-b border-[#000000]">
             <a href={handleGetHref(link)}>{link}</a>
           </li>
         );
